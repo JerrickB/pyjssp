@@ -277,7 +277,7 @@ class NodeProcessingTimeJobManager(JobManager):
         :return: Current time stamp job-shop graph
         """
 
-        g = nx.OrderedDiGraph()
+        g = nx.DiGraph()
         for job_id, job in self.jobs.items():
             for op in job.ops:
                 not_start_cond = not (op == job.ops[0])
